@@ -77,14 +77,14 @@
 
       | 工具 | 模型 | 派给谁 |
       |---|---|---|
-      | subagent | DeepSeek V4 Pro GA（火山 Coding Plan，max 推理档） | 铺路工主力：每条攻路线的证明写手 |
-      | subagent_flash | DeepSeek V4 Flash GA（火山 Coding Plan） | 跑量：计算核验、数值反例扫描、引理抽查 |
+      | subagent | Grok 4.6 xhigh（xAI） | 铺路工主力：每条攻路线的证明写手 |
+      | subagent_flash | Grok 4.6 xhigh（xAI） | 跑量：计算核验、数值反例扫描、引理抽查 |
       | subagent_grok | Grok 4.6 xhigh（xAI） | 首席拆台：专职造反例、找边界失效；也做主攻路的数学硬活 |
-      | subagent_minimax | MiniMax M3（minimax-cn key） | 独立阵营攻路/反方，防同阵营思维共振 |
-      | subagent_glm / subagent_doubao | GLM-5.3 / 豆包（火山 Coding Plan） | 外援阵营，关键结论独立复核 |
-      | subagent_qwen3 | Qwen3.8-max（百炼 key，余额敏感） | 点名才上：终极独立仲裁 |
+      | subagent_minimax | Grok 4.6 xhigh（xAI） | 独立阵营攻路/反方 |
+      | subagent_glm / subagent_doubao | Grok 4.6 xhigh（xAI） | 外援阵营，关键结论独立复核 |
+      | subagent_qwen3 | Grok 4.6 xhigh（xAI） | 点名才上：终极独立仲裁 |
 
-      **路由**：火山 Coding Plan 为主路（Agent Plan 与 DeepSeek 官方额度耗尽后全走 coding plan）；grok/minimax/qwen3 走 key 席位。grok 是拆台核心，每轮至少一次。
+      **路由**：全部席位走 xAI Grok 4.6（settings 把所有 reasoning 档映射为 xhigh）。火山 / DeepSeek 官方 / MiniMax / 百炼暂不用。
 
       ## 输出规范
 
@@ -170,10 +170,10 @@
         toolName: subagent
         backgroundMode: continuable
         agentOptions:
-          provider: volcengine-coding-plan
-          model: deepseek-v4-pro-ga-260813
+          provider: xai
+          model: grok-4.6
         persona: |-
-          你是金山木框架的铺路工，跑 DeepSeek V4 Pro GA（火山 Coding Plan，max 推理档）。主持人在 prompt 里指定了你这条攻路线的角度和产出格式。铁律：1) 只走你自己的角度，不许查文献、不许网络（你也没有）；2) 交完整产物（完整证明/引理链/建模），不是意见;3) 不开团不套娃；4) 不确定的写"不确定"，不许编定理。
+          你是金山木框架的铺路工，跑 Grok 4.6（xhigh）。主持人在 prompt 里指定了你这条攻路线的角度和产出格式。铁律：1) 只走你自己的角度，不许查文献、不许网络（你也没有）；2) 交完整产物（完整证明/引理链/建模），不是意见;3) 不开团不套娃；4) 不确定的写"不确定"，不许编定理。
 
     - id: tool-subagent-flash
       name: '@deepseek-ai/dsh-tool-subagent'
@@ -182,10 +182,10 @@
         toolName: subagent_flash
         backgroundMode: continuable
         agentOptions:
-          provider: volcengine-coding-plan
-          model: deepseek-v4-flash-ga-260731
+          provider: xai
+          model: grok-4.6
         persona: |-
-          你是金山木框架的核验工，跑 DeepSeek V4 Flash GA（火山 Coding Plan，跑量）。你的活：数值反例扫描、引理抽查、计算核验、批量检查候选证明的每个代数步骤。铁律：1) 不联网；2) 交核验结果+具体证据，不是印象；3) 不开团不套娃；4) 不确定的写"不确定"。
+          你是金山木框架的核验工，跑 Grok 4.6（xhigh）。你的活：数值反例扫描、引理抽查、计算核验、批量检查候选证明的每个代数步骤。铁律：1) 不联网；2) 交核验结果+具体证据，不是印象；3) 不开团不套娃；4) 不确定的写"不确定"。
 
     - id: tool-subagent-grok
       name: '@deepseek-ai/dsh-tool-subagent'
@@ -206,10 +206,10 @@
         toolName: subagent_minimax
         backgroundMode: continuable
         agentOptions:
-          provider: minimax-cn
-          model: MiniMax-M3
+          provider: xai
+          model: grok-4.6
         persona: |-
-          你是金山木框架的独立阵营攻手，跑 MiniMax M3（minimax-cn key）。你和 DeepSeek/xAI 不是一家——价值就是独立：你可以从完全不同、甚至反直觉的角度重推这条路线，敢于说主流思路错了。铁律：1) 不联网；2) 交完整产物；3) 不开团不套娃；4) 不确定的写"不确定"。
+          你是金山木框架的独立阵营攻手，跑 Grok 4.6（xhigh）。铁律：1) 不联网；2) 交完整产物；3) 不开团不套娃；4) 不确定的写"不确定"。
 
     - id: tool-subagent-qwen3
       name: '@deepseek-ai/dsh-tool-subagent'
@@ -218,10 +218,10 @@
         toolName: subagent_qwen3
         backgroundMode: continuable
         agentOptions:
-          provider: dashscope-deepseek
-          model: qwen3.8-max
+          provider: xai
+          model: grok-4.6
         persona: |-
-          你是金山木框架的终极仲裁，跑 Qwen3.8-max。余额敏感席位，只被点名才出现。你的活：对撑过多轮攻击的候选证明做独立终审，逐行核验。铁律：1) 不联网；2) 终审意见=通过/退回+理由；3) 不开团不套娃；4) 不确定的写"不确定"。
+          你是金山木框架的终极仲裁，跑 Grok 4.6（xhigh）。你的活：对撑过多轮攻击的候选证明做独立终审，逐行核验。铁律：1) 不联网；2) 终审意见=通过/退回+理由；3) 不开团不套娃；4) 不确定的写"不确定"。
 
     - id: tool-subagent-glm
       name: '@deepseek-ai/dsh-tool-subagent'
@@ -230,10 +230,10 @@
         toolName: subagent_glm
         backgroundMode: continuable
         agentOptions:
-          provider: volcengine-coding-plan
-          model: glm-5-3-260925
+          provider: xai
+          model: grok-4.6
         persona: |-
-          你是金山木框架的外援攻手，跑 GLM-5.3（火山 Coding Plan）。独立阵营，承担一条攻路线或对关键结论独立复核。铁律：1) 不联网；2) 交完整产物；3) 不开团不套娃；4) 不确定的写"不确定"。
+          你是金山木框架的外援攻手，跑 Grok 4.6（xhigh）。独立阵营，承担一条攻路线或对关键结论独立复核。铁律：1) 不联网；2) 交完整产物；3) 不开团不套娃；4) 不确定的写"不确定"。
 
     - id: tool-subagent-doubao
       name: '@deepseek-ai/dsh-tool-subagent'
@@ -242,10 +242,10 @@
         toolName: subagent_doubao
         backgroundMode: continuable
         agentOptions:
-          provider: volcengine-coding-plan
-          model: doubao-seed-2-1-turbo-260628
+          provider: xai
+          model: grok-4.6
         persona: |-
-          你是金山木框架的外援攻手，跑豆包 Seed 2.1 Turbo（火山 Coding Plan）。独立阵营，承担一条攻路线或对关键结论独立复核。铁律：1) 不联网；2) 交完整产物；3) 不开团不套娃；4) 不确定的写"不确定"。
+          你是金山木框架的外援攻手，跑 Grok 4.6（xhigh）。独立阵营，承担一条攻路线或对关键结论独立复核。铁律：1) 不联网；2) 交完整产物；3) 不开团不套娃；4) 不确定的写"不确定"。
 
     - id: tool-subagent-fork
       name: '@deepseek-ai/dsh-tool-subagent'
