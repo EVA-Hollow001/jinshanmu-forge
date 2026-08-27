@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "lo": 999,
+    "hi": 2000,
+    "max_stopping": 181,
+    "min_stopping": 10,
+    "mean_stopping": 74.5688622754491,
+    "median_stopping": 60.0,
+    "argmax_n": 1161,
+    "all_reach_one": true,
+    "n_samples": 1002
+  },
+  {
+    "id": 2,
+    "lo": 27000,
+    "hi": 28000,
+    "max_stopping": 258,
+    "min_stopping": 20,
+    "mean_stopping": 103.7992007992008,
+    "median_stopping": 90.0,
+    "argmax_n": 27135,
+    "all_reach_one": true,
+    "n_samples": 1001
+  },
+  {
+    "id": 3,
+    "lo": 99991,
+    "hi": 100010,
+    "max_stopping": 309,
+    "min_stopping": 53,
+    "mean_stopping": 118.1,
+    "median_stopping": 89.0,
+    "argmax_n": 100009,
+    "all_reach_one": true,
+    "n_samples": 20
+  },
+  {
+    "id": 4,
+    "lo": 499999,
+    "hi": 500100,
+    "max_stopping": 257,
+    "min_stopping": 45,
+    "mean_stopping": 134.7941176470588,
+    "median_stopping": 138.0,
+    "argmax_n": 499999,
+    "all_reach_one": true,
+    "n_samples": 102
+  },
+  {
+    "id": 5,
+    "lo": 999991,
+    "hi": 1000100,
+    "max_stopping": 258,
+    "min_stopping": 46,
+    "mean_stopping": 148.55454545454546,
+    "median_stopping": 139.0,
+    "argmax_n": 999995,
+    "all_reach_one": true,
+    "n_samples": 110
+  },
+  {
+    "id": 6,
+    "lo": 4999999,
+    "hi": 5000100,
+    "max_stopping": 343,
+    "min_stopping": 113,
+    "mean_stopping": 171.73529411764707,
+    "median_stopping": 175.0,
+    "argmax_n": 5000007,
+    "all_reach_one": true,
+    "n_samples": 102
+  },
+  {
+    "id": 7,
+    "lo": 9999991,
+    "hi": 10000100,
+    "max_stopping": 344,
+    "min_stopping": 114,
+    "mean_stopping": 177.62727272727273,
+    "median_stopping": 163.0,
+    "argmax_n": 10000014,
+    "all_reach_one": true,
+    "n_samples": 110
+  },
+  {
+    "id": 8,
+    "lo": 63728120,
+    "hi": 63728135,
+    "max_stopping": 949,
+    "min_stopping": 52,
+    "mean_stopping": 171.75,
+    "median_stopping": 127.0,
+    "argmax_n": 63728127,
+    "all_reach_one": true,
+    "n_samples": 16
+  },
+  {
+    "id": 9,
+    "lo": 49999991,
+    "hi": 50000100,
+    "max_stopping": 367,
+    "min_stopping": 106,
+    "mean_stopping": 144.05454545454546,
+    "median_stopping": 137.0,
+    "argmax_n": 49999993,
+    "all_reach_one": true,
+    "n_samples": 110
+  },
+  {
+    "id": 10,
+    "lo": 99999991,
+    "hi": 100000100,
+    "max_stopping": 368,
+    "min_stopping": 107,
+    "mean_stopping": 146.57272727272726,
+    "median_stopping": 138.0,
+    "argmax_n": 100000027,
+    "all_reach_one": true,
+    "n_samples": 110
+  }
+]

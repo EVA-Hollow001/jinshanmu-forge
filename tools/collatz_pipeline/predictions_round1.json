@@ -1,0 +1,15 @@
+{
+  "round": 1,
+  "predictions": [
+    {"id": 1, "max_stopping": 170, "mean_stopping": 75,  "all_reach_one": true, "confidence": "medium", "reasoning": "1e3 量级内已知最大记录保持者是 1161 附近，约 180 步量级；小区间平均停滞偏低"},
+    {"id": 2, "max_stopping": 230, "mean_stopping": 105, "all_reach_one": true, "confidence": "medium", "reasoning": "2.7e4 量级比 1e3 大两个数量级，最大停滞估计 200-260，平均约 100"},
+    {"id": 3, "max_stopping": 280, "mean_stopping": 120, "all_reach_one": true, "confidence": "low", "reasoning": "仅 20 个样本，方差大，但 1e5 量级最大值可能被某个顽固数拉到 280 附近"},
+    {"id": 4, "max_stopping": 270, "mean_stopping": 135, "all_reach_one": true, "confidence": "medium", "reasoning": "5e5 量级，停滞时间随规模缓慢增长，最大约 270，平均约 135"},
+    {"id": 5, "max_stopping": 290, "mean_stopping": 145, "all_reach_one": true, "confidence": "medium", "reasoning": "1e6 量级，与 5e5 接近但略高，最大约 290"},
+    {"id": 6, "max_stopping": 340, "mean_stopping": 165, "all_reach_one": true, "confidence": "low", "reasoning": "5e6 量级，最大停滞应进入 330-360 区间，平均约 165"},
+    {"id": 7, "max_stopping": 350, "mean_stopping": 170, "all_reach_one": true, "confidence": "low", "reasoning": "1e7 量级，与 5e6 接近，最大约 350"},
+    {"id": 8, "max_stopping": 949, "mean_stopping": 200, "all_reach_one": true, "confidence": "high", "reasoning": "区间明确包含已知记录保持者 63728127（949 步），最大停滞锁定 949；但其他 15 个数平均未知，估 200"},
+    {"id": 9, "max_stopping": 380, "mean_stopping": 150, "all_reach_one": true, "confidence": "low", "reasoning": "5e7 量级，最大停滞可能接近 400，平均约 150"},
+    {"id": 10,"max_stopping": 390, "mean_stopping": 150, "all_reach_one": true, "confidence": "low", "reasoning": "1e8 量级，接近 5e7，最大约 390"}
+  ]
+}

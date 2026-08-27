@@ -1,0 +1,15 @@
+{
+  "round": 2,
+  "predictions": [
+    {"id": 1, "max_stopping": 178, "mean_stopping": 75,  "all_reach_one": true, "confidence": "high", "reasoning": "校准：Round1 在 1e3 区间低估 6%，上调至 178"},
+    {"id": 2, "max_stopping": 256, "mean_stopping": 105, "all_reach_one": true, "confidence": "medium", "reasoning": "校准：Round1 在 2.7e4 低估 11%（230 vs 258），按偏差上调"},
+    {"id": 3, "max_stopping": 305, "mean_stopping": 120, "all_reach_one": true, "confidence": "medium", "reasoning": "校准：Round1 在 1e5 小区间低估 9%（280 vs 309），上调"},
+    {"id": 4, "max_stopping": 258, "mean_stopping": 135, "all_reach_one": true, "confidence": "medium", "reasoning": "校准：Round1 高估 5%（270 vs 257），下调至真实附近"},
+    {"id": 5, "max_stopping": 262, "mean_stopping": 148, "all_reach_one": true, "confidence": "medium", "reasoning": "校准：Round1 高估 12%（290 vs 258），大幅下调；均值也贴近 148"},
+    {"id": 6, "max_stopping": 342, "mean_stopping": 170, "all_reach_one": true, "confidence": "high", "reasoning": "校准：Round1 已很准（340 vs 343，1%），微调"},
+    {"id": 7, "max_stopping": 345, "mean_stopping": 176, "all_reach_one": true, "confidence": "high", "reasoning": "校准：Round1 准（350 vs 344，2%），微调"},
+    {"id": 8, "max_stopping": 949, "mean_stopping": 172, "all_reach_one": true, "confidence": "high", "reasoning": "记录保持者在区间内锁定 949；均值从 200 校准至 172（Round1 均值偏高）"},
+    {"id": 9, "max_stopping": 372, "mean_stopping": 145, "all_reach_one": true, "confidence": "high", "reasoning": "校准：Round1 高估 4%（380 vs 367），下调；均值贴近 145"},
+    {"id": 10,"max_stopping": 372, "mean_stopping": 148, "all_reach_one": true, "confidence": "high", "reasoning": "校准：Round1 高估 6%（390 vs 368），下调"}
+  ]
+}
